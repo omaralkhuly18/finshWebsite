@@ -418,12 +418,12 @@
   /*--
         On Load Function
     -----------------------------------*/
-  $window.on("load", function () {});
+  $window.on("load", function () { });
 
   /*--
         Resize Function
     -----------------------------------*/
-  $window.resize(function () {});
+  $window.resize(function () { });
 })(jQuery);
 
 // menu_toggel
@@ -680,23 +680,90 @@ function getPageList(totalPages, page, maxLength) {
   );
 }
 
-$(function () {
-  // var e = document.getElementById("table_size");
-  // var val = e.options[e.selectedIndex].value;
-  // $("#table_size").val();
-  // let selection = document.getElementById("table_size");
+// $(function () {
+//   var numberOfItem = $(".accordionFAQs .item").length;
+//   var limitPerPage = 15;
+//   var totalPages = Math.ceil(numberOfItem / limitPerPage);
+//   var paginationSize = 3;
+//   var currentPage;
 
-  // selection.addEventListener("change", () => {
-  //   var val = selection.options[selection.selectedIndex].text;
-  //   // value.innerText = selection.options[Selection.selectedIndex].text;
-  //   console.log(val);
-  // });
-  // filterIndex = val;
-  // console.log(filterIndex);
+//   function showPage(whichPage) {
+//     if (whichPage < 1 || whichPage > totalPages) return true;
+
+//     currentPage = whichPage;
+
+//     $(".accordionFAQs .item")
+//       .hide()
+//       .slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage)
+//       .show();
+
+//     $(".pagination li").slice(1, -1).remove();
+
+//     getPageList(totalPages, currentPage, paginationSize).forEach((item) => {
+//       $("<li>")
+//         .addClass("page-item")
+//         .addClass(item ? "current-page" : "dots")
+//         .toggleClass("active", item === currentPage)
+//         .append(
+//           $("<a>")
+//             .addClass("page-link")
+//             .attr({ href: "javascript:void(0)" })
+//         )
+//         .insertBefore(".next-page");
+//     });
+
+//     // $(".Previous-page").toggleClass("disable", page === 1);
+//     // $(".next-page").toggleClass("disable", page === totalPages);
+//     $(".previous-page").toggleClass("disable", currentPage === 1);
+//     $(".next-page").toggleClass("disable", currentPage === totalPages);
+
+//     return true;
+//   }
+
+//   // $(".pagination").append(
+//   //   $("<li>")
+//   //     .addClass("page-item")
+//   //     .addClass("previous-page")
+//   //     .append(
+//   //       $("<a>")
+//   //         .addClass("page-link")
+//   //         .attr({ href: "javascript:void(0)" })
+//   //         .text("Prev")
+//   //     ),
+//   //   $("<li>")
+//   //     .addClass("page-item")
+//   //     .addClass("next-page")
+//   //     .append(
+//   //       $("<a>")
+//   //         .addClass("page-link")
+//   //         .attr({ href: "javascript:void(0)" })
+//   //         .text("Next")
+//   //     )
+//   // );
+
+//   $(".accordionFAQs").show();
+//   showPage(1);
+
+//   $(document).on(
+//     "click",
+//     ".pagination li.current-page:not(.active)",
+//     function () {
+//       return showPage(+$(this).text());
+//     }
+//   );
+
+//   $(".next-page").on("click", function () {
+//     return showPage(currentPage + 1);
+//   });
+//   $(".previous-page").on("click", function () {
+//     return showPage(currentPage - 1);
+//   });
+// });
+$(function () {
   var numberOfItem = $(".accordionFAQs .item").length;
-  var limitPerPage = 10;
+  var limitPerPage = 15;
   var totalPages = Math.ceil(numberOfItem / limitPerPage);
-  var paginationSize = 5;
+  var paginationSize = 3;
   var currentPage;
 
   function showPage(whichPage) {
@@ -709,7 +776,7 @@ $(function () {
       .slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage)
       .show();
 
-    $(".pagination li").slice(1, -1).remove();
+    $(".displaynum").slice(1, -1).remove();
 
     getPageList(totalPages, currentPage, paginationSize).forEach((item) => {
       $("<li>")
@@ -725,41 +792,18 @@ $(function () {
         .insertBefore(".next-page");
     });
 
-    // $(".Previous-page").toggleClass("disable", page === 1);
-    // $(".next-page").toggleClass("disable", page === totalPages);
     $(".previous-page").toggleClass("disable", currentPage === 1);
     $(".next-page").toggleClass("disable", currentPage === totalPages);
 
     return true;
   }
 
-  $(".pagination").append(
-    $("<li>")
-      .addClass("page-item")
-      .addClass("previous-page")
-      .append(
-        $("<a>")
-          .addClass("page-link")
-          .attr({ href: "javascript:void(0)" })
-          .text("Prev")
-      ),
-    $("<li>")
-      .addClass("page-item")
-      .addClass("next-page")
-      .append(
-        $("<a>")
-          .addClass("page-link")
-          .attr({ href: "javascript:void(0)" })
-          .text("Next")
-      )
-  );
-
   $(".accordionFAQs").show();
   showPage(1);
 
   $(document).on(
     "click",
-    ".pagination li.current-page:not(.active)",
+    ".pagination .current-page:not(.active)",
     function () {
       return showPage(+$(this).text());
     }
@@ -768,10 +812,44 @@ $(function () {
   $(".next-page").on("click", function () {
     return showPage(currentPage + 1);
   });
+
   $(".previous-page").on("click", function () {
     return showPage(currentPage - 1);
   });
+
 });
+
+function getPageList(totalPages, page, maxLength) {
+  if (maxLength < 5) throw "maxLength must be at least 5";
+
+  function range(start, end) {
+    return Array.from(Array(end - start + 1), (_, i) => i + start);
+  }
+
+  var sideWidth = maxLength < 9 ? 1 : 2;
+  var leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+  var rightWidth = (maxLength - sideWidth * 2 - 2) >> 1;
+
+  if (totalPages <= maxLength) {
+    // no breaks in list
+    return range(1, totalPages);
+  }
+
+  if (page <= maxLength - sideWidth - 1 - rightWidth) {
+    // no break on left of page
+    return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
+  }
+
+  if (page >= totalPages - sideWidth - 1 - rightWidth) {
+    // no break on right of page
+    return range(1, sideWidth).
+    concat(0, range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages));
+  }
+
+  // Breaks on both sides
+  return range(1, sideWidth).
+  concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
+}
 /* =====================test_area =============*/
 $(document).ready(
   (function () {
@@ -806,3 +884,16 @@ $(document).ready(
     });
   })(jQuery)
 );
+
+// var e = document.getElementById("table_size");
+// var val = e.options[e.selectedIndex].value;
+// $("#table_size").val();
+// let selection = document.getElementById("table_size");
+
+// selection.addEventListener("change", () => {
+//   var val = selection.options[selection.selectedIndex].text;
+//   // value.innerText = selection.options[Selection.selectedIndex].text;
+//   console.log(val);
+// });
+// filterIndex = val;
+// console.log(filterIndex);
