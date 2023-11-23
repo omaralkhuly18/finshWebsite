@@ -264,7 +264,7 @@
 
 /* The side navigation menu */
 .sidebar {
-  margin: 167px 7px;
+  margin: 16px 0;
   padding: 0;
   width: 20%;
   background-color: #f1f1f1;
@@ -543,6 +543,7 @@ p {
 .person-documents label {
   /* width: 72%; */
   display: flex;
+  align-items: center;
   text-transform: capitalize;
   color: #fff;
   background-color: #1292ee;

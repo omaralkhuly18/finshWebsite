@@ -169,10 +169,12 @@
   line-height: 1.42857;
 }
 .btn {
-  width: 22%;
+  width: 25%;
   color: #000;
-  padding: 10px 20px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 6% 20%; */
   font-size: 14px;
   outline: none;
   cursor: pointer;
@@ -200,7 +202,7 @@
 }
 .form-control {
   margin: auto;
-  width: 60% !important;
+  width: 60%;
   background: #fff !important;
   height: 44px;
   border: none;
@@ -214,7 +216,7 @@
 .form-control-caption {
   display: block;
   margin-top: 2px;
-  width: 60% !important;
+  width: 60%;
   background: #fff !important;
   height: 44px;
   border: none;
@@ -310,6 +312,10 @@ div.content-personal {
   float: right;
   height: auto !important;
   margin: 0 !important;
+}
+.car-images p, .car-information p{
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
 }
 .tab-profile {
   width: 81%;
