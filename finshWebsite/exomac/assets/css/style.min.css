@@ -8949,12 +8949,9 @@ fieldset:disabled .btn {
   }
   button.tablinks,
   button.tablinkse {
-    width: 45%;
+    width: 50%;
     height: 40px;
     padding: 6px 16px !important;
-  }
-  button.tablinkse{
-    width: 50% !important;
   }
   .personal_info{
     padding: 9px 0 !important;
@@ -38738,6 +38735,7 @@ div#forgot-password {
   .testi-wrap {
     height: 630px;
   }
+  
 }
 
 @media only screen and (min-width: 360px) and (max-width: 479px) {
@@ -38794,7 +38792,7 @@ div#forgot-password {
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 359px) {
+@media only screen and (min-width: 290px) and (max-width: 359px) {
   #testimonial-area .section-heading h2 {
     font-size: 30px;
   }
@@ -38803,7 +38801,7 @@ div#forgot-password {
     line-height: 26px;
   }
   .client-single.active {
-    width: 80%;
+    width: 100%;
   }
   .client-comment span i {
     font-size: 40px;
@@ -38843,7 +38841,7 @@ div#forgot-password {
     height: 100px;
   }
   .testi-wrap {
-    height: 550px;
+    height: 650px;
   }
 }
 

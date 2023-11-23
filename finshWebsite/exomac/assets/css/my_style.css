@@ -650,6 +650,10 @@ p {
   text-decoration: none;
 }
 /* mapStyle */
+.content-map {
+  position: relative;
+  width: 100%;
+}
 #map {
   height: 270px;
   width: 365px;
@@ -658,8 +662,10 @@ p {
   overflow: hidden;
   right: 0%;
 }
-.content-map {
-  position: relative;
+@media screen and (max-width: 579px) and (min-width: 290px) {
+  #map{
+    width: 100%;
+  }
 }
 .data strong {
   color: #030f27;
@@ -1102,7 +1108,7 @@ label.error,
     margin: 50px auto;
   }
   .timeline::before {
-    left: 31px;
+    left: 6px;
   }
   .stepperData {
     width: 100%;
