@@ -693,6 +693,10 @@ progress {
     width: 70px !important;
     height: 70px !important;
   }
+  .stylesvglang {
+    margin-left: 3px;
+    margin-right: 8px;
+}
 }
 .col-1 {
   -webkit-box-flex: 0;
