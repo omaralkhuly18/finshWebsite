@@ -177,7 +177,7 @@
   background: linear-gradient(to bottom right, #66fd9c, #f6fa60);
 }
 /*========== profile_menu  profile_menu_Language start ==========*/
-.stylesvglang{
+.stylesvglang {
   font-size: 25px;
   color: #fff;
   margin-left: 15px;
@@ -185,7 +185,7 @@
   cursor: pointer;
 }
 .profile_menu,
-.profile_menu_Language{
+.profile_menu_Language {
   position: absolute;
   border-radius: 15px;
   top: 100%;
@@ -202,60 +202,60 @@
   visibility: hidden;
   opacity: 0;
 }
-.profile_menu{
+.profile_menu {
   right: -3%;
   width: 16% !important;
 }
-.profile_menu_Language{
+.profile_menu_Language {
   right: 0%;
   width: 22% !important;
 }
 @media screen and (max-width: 1199px) and (min-width: 991px) {
-  .profile_menu{
+  .profile_menu {
     left: 8%;
     width: 20% !important;
   }
-  .profile_menu_Language{
+  .profile_menu_Language {
     right: 0%;
   }
 }
 @media screen and (max-width: 991px) and (min-width: 767px) {
-  .profile_menu{
+  .profile_menu {
     left: 9%;
     width: 30% !important;
   }
-  .profile_menu_Language{
+  .profile_menu_Language {
     right: 2%;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 576px) {
-  .profile_menu{
+  .profile_menu {
     left: 12%;
     width: 40% !important;
   }
-  .profile_menu_Language{
+  .profile_menu_Language {
     right: 3%;
   }
 }
-@media screen and (max-width: 405px) and (min-width: 300px){
-  .profile_menu_Language{
+@media screen and (max-width: 405px) and (min-width: 300px) {
+  .profile_menu_Language {
     right: 10%;
     width: 30% !important;
   }
 }
-@media screen and (max-width: 300px) and (min-width: 220px){
-  .profile_menu_Language{
+@media screen and (max-width: 300px) and (min-width: 220px) {
+  .profile_menu_Language {
     right: 14%;
     width: 35% !important;
   }
 }
 .profile_menu.active,
-.profile_menu_Language.active{
+.profile_menu_Language.active {
   visibility: visible;
   opacity: 1;
 }
 .profile_menu::before,
-.profile_menu_Language::before{
+.profile_menu_Language::before {
   content: "";
   width: 0px;
   height: 0px;
@@ -266,11 +266,11 @@
   border-style: solid;
   border-color: transparent transparent #fff transparent;
 }
-.profile_menu::before{
+.profile_menu::before {
   top: -14%;
   right: 46%;
 }
-.profile_menu_Language::before{
+.profile_menu_Language::before {
   top: -28%;
   right: 49%;
 }
@@ -287,19 +287,19 @@
   background-size: cover;
 }
 .profile_menu ul,
-.profile_menu_Language ul{
+.profile_menu_Language ul {
   list-style: none;
   padding: 10px 0;
   margin: 10px;
 }
 .profile_menu ul li:hover,
-.profile_menu_Language ul li:hover{
+.profile_menu_Language ul li:hover {
   color: #1292ee;
 }
 /*========== profile_menu  profile_menu_Language end ==========*/
 .header-logo img {
-  width: 100px !important;
-  height: 100px !important;
+  width: 70px !important;
+  height: 70px !important;
 }
 .footer-logo img {
   margin: 29px -18px;
@@ -710,7 +710,7 @@ p {
   right: 0%;
 }
 @media screen and (max-width: 579px) and (min-width: 220px) {
-  #map{
+  #map {
     width: 100%;
   }
 }
@@ -1174,5 +1174,36 @@ label.error,
     border-right: 15px solid #fff;
     border-left: 0;
     left: -15px;
+  }
+}
+
+/* SiteMedia */
+@media screen and (max-width: 1199px) and (min-width: 991px) {
+}
+@media screen and (max-width: 991px) and (min-width: 767px) {
+}
+@media screen and (max-width: 767px) and (min-width: 576px) {
+}
+@media screen and (max-width: 405px) and (min-width: 220px) {
+}
+
+/*icon At navBar*/
+
+@media screen and (max-width: 405px) and (min-width: 220px) {
+  .fa-bell {
+    font-size: 18px;
+  }
+  .bell-notificatin::after {
+    width: 12px;
+    height: 12px;
+  }
+  .stylesvglang {
+    font-size: 17px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .header-logo img {
+    height: 40px !important;
+    max-width: 40px !important;
   }
 }

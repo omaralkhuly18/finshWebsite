@@ -669,9 +669,7 @@ progress {
   .col-auto{
     width: 45% !important;
   }
-  .header-logo img{
-    max-width: 70px !important;
-  }
+ 
   .site-main-mobile-menu-inner {
     width: 200px !important;
   }
