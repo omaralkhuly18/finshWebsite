@@ -78,7 +78,7 @@
   padding: 7px 43px 7px 50px;
 }
 .header-logo img {
-  max-width: 60% !important;
+  max-width: 60%;
 }
 .footer-logo img {
   max-width: 30% !important;
@@ -437,3 +437,8 @@ div.content-personal {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+/* pagination start*/
+.pagination{
+  direction: ltr;
+}
+/* .pagination end*/

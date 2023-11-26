@@ -662,6 +662,32 @@ progress {
   flex: 0 0 auto;
   width: auto;
 }
+.header-logo{
+  width: 100%;
+}
+@media screen and (max-width: 300px) and (min-width: 220px){
+  .col-auto{
+    width: 45% !important;
+  }
+  .header-logo img{
+    max-width: 70px !important;
+  }
+  .site-main-mobile-menu-inner {
+    width: 200px !important;
+  }
+  .notification-box{
+    width: 210px !important;
+  }
+  .notification-box {
+    left: 8px !important;
+  }
+  .mobile-menu-header{
+    padding: 0 15px 0 15px !important;
+  }
+  .mobile-menu-logo {
+    width: 35% !important;
+  }
+}
 .col-1 {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;

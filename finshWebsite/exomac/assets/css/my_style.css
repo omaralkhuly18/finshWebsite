@@ -662,7 +662,7 @@ p {
   overflow: hidden;
   right: 0%;
 }
-@media screen and (max-width: 579px) and (min-width: 290px) {
+@media screen and (max-width: 579px) and (min-width: 220px) {
   #map{
     width: 100%;
   }
