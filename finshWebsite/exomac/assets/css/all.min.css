@@ -2,11 +2,11 @@
  * Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2023 Fonticons, Inc.
- */
+ 
 .fa {
     font-family: var(--fa-style-family, "Font Awesome 6 Free");
     font-weight: var(--fa-style, 900)
-}
+}*/
 
 .fa,
 .fa-brands,
@@ -26,7 +26,7 @@
     text-rendering: auto
 }
 
-.fa-classic,
+/* .fa-classic,
 .fa-regular,
 .fa-solid,
 .far,
@@ -37,7 +37,7 @@
 .fa-brands,
 .fab {
     font-family: "Font Awesome 6 Brands"
-}
+} */
 
 .fa-1x {
     font-size: 1em
@@ -6782,19 +6782,19 @@
     border-width: 0
 }
 
-:host,
+/* :host,
 :root {
     --fa-style-family-brands: "Font Awesome 6 Brands";
     --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands"
-}
+} */
 
-@font-face {
+/* @font-face {
     font-family: "Font Awesome 6 Brands";
     font-style: normal;
     font-weight: 400;
     font-display: block;
     src: url(../webfonts/fa-brands-400.woff2) format("woff2"), url(../webfonts/fa-brands-400.ttf) format("truetype")
-}
+} */
 
 .fa-brands,
 .fab {
@@ -8723,7 +8723,7 @@
     content: "\f3f6"
 }
 
-:host,
+/* :host,
 :root {
     --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free"
 }
@@ -8734,14 +8734,14 @@
     font-weight: 400;
     font-display: block;
     src: url(../webfonts/fa-regular-400.woff2) format("woff2"), url(../webfonts/fa-regular-400.ttf) format("truetype")
-}
+} */
 
 .fa-regular,
 .far {
     font-weight: 400
 }
 
-:host,
+/* :host,
 :root {
     --fa-style-family-classic: "Font Awesome 6 Free";
     --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free"
@@ -8753,7 +8753,7 @@
     font-weight: 900;
     font-display: block;
     src: url(../webfonts/fa-solid-900.woff2) format("woff2"), url(../webfonts/fa-solid-900.ttf) format("truetype")
-}
+} */
 
 .fa-solid,
 .fas {
