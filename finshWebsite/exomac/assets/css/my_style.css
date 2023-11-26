@@ -176,13 +176,19 @@
 .table3 .buy_now {
   background: linear-gradient(to bottom right, #66fd9c, #f6fa60);
 }
-/* profile_menu */
-.profile_menu {
+/*========== profile_menu  profile_menu_Language start ==========*/
+.stylesvglang{
+  font-size: 25px;
+  color: #fff;
+  margin-left: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.profile_menu,
+.profile_menu_Language{
   position: absolute;
   border-radius: 15px;
   top: 100%;
-  right: -3%;
-  width: 16% !important;
   background-color: #fff;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -196,29 +202,60 @@
   visibility: hidden;
   opacity: 0;
 }
+.profile_menu{
+  right: -3%;
+  width: 16% !important;
+}
+.profile_menu_Language{
+  right: 7%;
+  width: 22% !important;
+}
 @media screen and (max-width: 1199px) and (min-width: 991px) {
-  .profile_menu {
+  .profile_menu{
     left: 8%;
     width: 20% !important;
   }
+  .profile_menu_Language{
+    left: 8%;
+  }
 }
 @media screen and (max-width: 991px) and (min-width: 767px) {
-  .profile_menu {
+  .profile_menu{
     left: 9%;
     width: 30% !important;
   }
+  .profile_menu_Language{
+    right: 2%;
+  }
 }
 @media screen and (max-width: 767px) and (min-width: 576px) {
-  .profile_menu {
+  .profile_menu{
     left: 12%;
     width: 40% !important;
   }
+  .profile_menu_Language{
+    right: -2%;
+  }
 }
-.profile_menu.active {
+@media screen and (max-width: 405px) and (min-width: 300px){
+  .profile_menu_Language{
+    right: 10%;
+    width: 30% !important;
+  }
+}
+@media screen and (max-width: 300px) and (min-width: 220px){
+  .profile_menu_Language{
+    right: 14%;
+    width: 35% !important;
+  }
+}
+.profile_menu.active,
+.profile_menu_Language.active{
   visibility: visible;
   opacity: 1;
 }
-.profile_menu::before {
+.profile_menu::before,
+.profile_menu_Language::before{
   content: "";
   width: 0px;
   height: 0px;
@@ -228,6 +265,14 @@
   border-width: 10px;
   border-style: solid;
   border-color: transparent transparent #fff transparent;
+}
+.profile_menu::before{
+  top: -14%;
+  right: 46%;
+}
+.profile_menu_Language::before{
+  top: -28%;
+  right: 49%;
 }
 .user_image {
   height: 60px;
@@ -241,15 +286,17 @@
   overflow: hidden;
   background-size: cover;
 }
-.profile_menu ul {
+.profile_menu ul,
+.profile_menu_Language ul{
   list-style: none;
   padding: 10px 0;
   margin: 10px;
 }
-.profile_menu ul li:hover {
+.profile_menu ul li:hover,
+.profile_menu_Language ul li:hover{
   color: #1292ee;
 }
-
+/*========== profile_menu  profile_menu_Language end ==========*/
 .header-logo img {
   width: 100px !important;
   height: 100px !important;

@@ -688,6 +688,12 @@ progress {
     width: 35% !important;
   }
 }
+@media screen and (max-width: 338px) and (min-width: 301px){
+  .header-logo img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+}
 .col-1 {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;

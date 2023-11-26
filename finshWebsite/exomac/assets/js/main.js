@@ -436,6 +436,10 @@ function menuToggleNotification() {
   const toggleNotification = document.querySelector(".notification-box");
   toggleNotification.classList.toggle("active");
 }
+function menuToggleLanguage() {
+  const toggleMenuLang = document.querySelector(".profile_menu_Language");
+  toggleMenuLang.classList.toggle("active");
+}
 
 //////
 var d = new Date();
