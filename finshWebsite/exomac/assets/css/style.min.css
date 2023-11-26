@@ -37044,9 +37044,9 @@ textarea:focus {
   opacity: 1;
 }
 .single-portfolio:hover .content {
-  -webkit-transform: translateY(-70%);
-  -ms-transform: translateY(-70%);
-  transform: translateY(-70%);
+  -webkit-transform: translateY(-5%);
+  -ms-transform: translateY(-5%);
+  transform: translateY(-5%);
   opacity: 1;
 }
 .work {
@@ -38838,7 +38838,7 @@ div#forgot-password {
   }
 }
 
-@media only screen and (min-width: 290px) and (max-width: 359px) {
+@media only screen and (min-width: 220px) and (max-width: 359px) {
   #testimonial-area .section-heading h2 {
     font-size: 30px;
   }
