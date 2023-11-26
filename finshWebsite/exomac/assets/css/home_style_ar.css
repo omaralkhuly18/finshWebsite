@@ -8,12 +8,19 @@
   left: -3%;
   right: auto;
 }
-
+.profile_menu_Language {
+  left: 7%;
+  right: auto !important;
+  width: 22% !important;
+}
 @media screen and (max-width: 1199px) and (min-width: 991px) {
   .profile_menu{
     right: 7%;
     left: auto !important;
     width: 25% !important;
+  }
+  .profile_menu_Language {
+    left: 0%;
   }
 }
 @media screen and (max-width: 991px) and (min-width: 767px) {
