@@ -207,7 +207,7 @@
   width: 16% !important;
 }
 .profile_menu_Language{
-  right: 7%;
+  right: 0%;
   width: 22% !important;
 }
 @media screen and (max-width: 1199px) and (min-width: 991px) {
@@ -216,7 +216,7 @@
     width: 20% !important;
   }
   .profile_menu_Language{
-    left: 8%;
+    right: 0%;
   }
 }
 @media screen and (max-width: 991px) and (min-width: 767px) {
@@ -234,7 +234,7 @@
     width: 40% !important;
   }
   .profile_menu_Language{
-    right: -2%;
+    right: 3%;
   }
 }
 @media screen and (max-width: 405px) and (min-width: 300px){
