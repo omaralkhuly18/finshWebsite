@@ -19,10 +19,10 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
-function menuToggle() {
-  const toggleMenu = document.querySelector("#Client");
-  toggleMenu.classList.toggle("active");
-}
+// function menuToggle() {
+//   const toggleMenu = document.querySelector("#Client");
+//   toggleMenu.classList.toggle("active");
+// }
 
 
 $(function () {
