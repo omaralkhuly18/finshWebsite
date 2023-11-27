@@ -418,12 +418,12 @@
   /*--
         On Load Function
     -----------------------------------*/
-  $window.on("load", function () { });
+  $window.on("load", function () {});
 
   /*--
         Resize Function
     -----------------------------------*/
-  $window.resize(function () { });
+  $window.resize(function () {});
 })(jQuery);
 
 // menu_toggel
@@ -488,20 +488,20 @@ function getPageList(totalPages, page, maxLength) {
 }
 
 $(function () {
-  var e = document.getElementById("table_size");
-  var val = e.options[e.selectedIndex].value;
-  $("#table_size").val();
-  let selection = document.getElementById("table_size");
+  // var e = document.getElementById("table_size");
+  // var val = e.options[e.selectedIndex].value;
+  // $("#table_size").val();
+  // let selection = document.getElementById("table_size");
 
-  selection.addEventListener("change", () => {
-    var val = selection.options[selection.selectedIndex].text;
-    // value.innerText = selection.options[Selection.selectedIndex].text;
-    console.log(val);
-  });
-  filterIndex = val;
+  // selection.addEventListener("change", () => {
+  //   var val = selection.options[selection.selectedIndex].text;
+  //   // value.innerText = selection.options[Selection.selectedIndex].text;
+  //   console.log(val);
+  // });
+  // filterIndex = val;
   // console.log(filterIndex);
   var numberOfItem = $(".accordion .item").length;
-  var limitPerPage = val;
+  var limitPerPage = 3;
   var totalPages = Math.ceil(numberOfItem / limitPerPage);
   var paginationSize = 5;
   var currentPage;
@@ -649,40 +649,40 @@ function x() {
 }
 
 /*==============pagination FAQs=========*/
-function getPageList(totalPages, page, maxLength) {
-  function range(start, end) {
-    return Array.from(Array(end - start + 1), (_, i) => i + start);
-  }
+// function getPageList(totalPages, page, maxLength) {
+//   function range(start, end) {
+//     return Array.from(Array(end - start + 1), (_, i) => i + start);
+//   }
 
-  var slideWidth = maxLength < 9 ? 1 : 2;
-  var leftWidth = (maxLength - slideWidth * 2 - 3) >> 1;
-  var rightWidth = (maxLength - slideWidth * 2 - 3) >> 1;
+//   var slideWidth = maxLength < 9 ? 1 : 2;
+//   var leftWidth = (maxLength - slideWidth * 2 - 3) >> 1;
+//   var rightWidth = (maxLength - slideWidth * 2 - 3) >> 1;
 
-  if (totalPages <= maxLength) {
-    return range(1, totalPages);
-  }
+//   if (totalPages <= maxLength) {
+//     return range(1, totalPages);
+//   }
 
-  if (page <= maxLength - slideWidth - 1 - rightWidth) {
-    return range(1, maxLength - slideWidth - 1).concat(
-      0,
-      range(totalPages - slideWidth + 1, totalPages)
-    );
-  }
+//   if (page <= maxLength - slideWidth - 1 - rightWidth) {
+//     return range(1, maxLength - slideWidth - 1).concat(
+//       0,
+//       range(totalPages - slideWidth + 1, totalPages)
+//     );
+//   }
 
-  if (page >= totalPages - slideWidth - 1 - rightWidth) {
-    return range(1, slideWidth).concat(
-      0,
-      range(totalPages - slideWidth - 1 - rightWidth - leftWidth, totalPages)
-    );
-  }
+//   if (page >= totalPages - slideWidth - 1 - rightWidth) {
+//     return range(1, slideWidth).concat(
+//       0,
+//       range(totalPages - slideWidth - 1 - rightWidth - leftWidth, totalPages)
+//     );
+//   }
 
-  return range(1, slideWidth).concat(
-    0,
-    range(page - leftWidth, page + rightWidth),
-    0,
-    range(totalPages - slideWidth + 1, totalPages)
-  );
-}
+//   return range(1, slideWidth).concat(
+//     0,
+//     range(page - leftWidth, page + rightWidth),
+//     0,
+//     range(totalPages - slideWidth + 1, totalPages)
+//   );
+// }
 
 // $(function () {
 //   var numberOfItem = $(".accordionFAQs .item").length;
@@ -820,7 +820,6 @@ $(function () {
   $(".previous-page").on("click", function () {
     return showPage(currentPage - 1);
   });
-
 });
 
 function getPageList(totalPages, page, maxLength) {
@@ -841,18 +840,27 @@ function getPageList(totalPages, page, maxLength) {
 
   if (page <= maxLength - sideWidth - 1 - rightWidth) {
     // no break on left of page
-    return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
+    return range(1, maxLength - sideWidth - 1).concat(
+      0,
+      range(totalPages - sideWidth + 1, totalPages)
+    );
   }
 
   if (page >= totalPages - sideWidth - 1 - rightWidth) {
     // no break on right of page
-    return range(1, sideWidth).
-    concat(0, range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages));
+    return range(1, sideWidth).concat(
+      0,
+      range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages)
+    );
   }
 
   // Breaks on both sides
-  return range(1, sideWidth).
-  concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
+  return range(1, sideWidth).concat(
+    0,
+    range(page - leftWidth, page + rightWidth),
+    0,
+    range(totalPages - sideWidth + 1, totalPages)
+  );
 }
 /* =====================test_area =============*/
 $(document).ready(

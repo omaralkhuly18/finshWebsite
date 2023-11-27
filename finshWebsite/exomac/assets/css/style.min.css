@@ -662,31 +662,31 @@ progress {
   flex: 0 0 auto;
   width: auto;
 }
-.header-logo{
+.header-logo {
   width: 100%;
 }
-@media screen and (max-width: 300px) and (min-width: 220px){
-  .col-auto{
+@media screen and (max-width: 300px) and (min-width: 220px) {
+  .col-auto {
     width: 45% !important;
   }
- 
+
   .site-main-mobile-menu-inner {
     width: 200px !important;
   }
-  .notification-box{
+  .notification-box {
     width: 210px !important;
   }
   .notification-box {
     left: 8px !important;
   }
-  .mobile-menu-header{
+  .mobile-menu-header {
     padding: 0 15px 0 15px !important;
   }
   .mobile-menu-logo {
     width: 35% !important;
   }
 }
-@media screen and (max-width: 338px) and (min-width: 301px){
+@media screen and (max-width: 338px) and (min-width: 301px) {
   .header-logo img {
     width: 70px !important;
     height: 70px !important;
@@ -694,7 +694,7 @@ progress {
   .stylesvglang {
     margin-left: 3px;
     margin-right: 8px;
-}
+  }
 }
 .col-1 {
   -webkit-box-flex: 0;
@@ -8977,7 +8977,7 @@ fieldset:disabled .btn {
   z-index: 1020;
 }
 @media screen and (max-width: 579px) and (min-width: 290px) {
-  .flexspaeve{
+  .flexspaeve {
     display: flex;
     justify-content: space-evenly;
   }
@@ -8987,25 +8987,25 @@ fieldset:disabled .btn {
     height: 40px;
     padding: 6px 16px !important;
   }
-  .personal_info{
+  .personal_info {
     padding: 9px 0 !important;
   }
   .form-control,
-  .form-control-caption{
+  .form-control-caption {
     width: 99% !important;
   }
   .taps .btn {
     width: 30% !important;
     margin: 6% 20%;
   }
-  svg.svg-inline--fa.fa-id-card-clip{
+  svg.svg-inline--fa.fa-id-card-clip {
     margin-left: 3%;
   }
-  .widthmyom{
+  .widthmyom {
     width: 95% !important;
   }
 }
-button.tablinks{
+button.tablinks {
   margin-top: 2%;
 }
 @media (min-width: 576px) {
@@ -36321,7 +36321,7 @@ textarea:focus {
   width: 100%;
 }
 .img_stack img {
-  width:  100%;
+  width: 100%;
 }
 .about-image-area .about-image.right-n50 {
   right: -50px !important;
@@ -38368,7 +38368,7 @@ button.btn.btn-link svg {
   text-align: center;
 }
 
-.pagination .displaynum  {
+.pagination .displaynum {
   display: inline;
   text-align: center;
 }
@@ -38789,7 +38789,6 @@ div#forgot-password {
   .testi-wrap {
     height: 630px;
   }
-  
 }
 
 @media only screen and (min-width: 360px) and (max-width: 479px) {
@@ -38903,4 +38902,7 @@ div#forgot-password {
   font-size: 21px;
   color: #222;
   padding: 0 10px;
+}
+.search_area {
+  width: 25%;
 }

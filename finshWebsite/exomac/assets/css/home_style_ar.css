@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-.profile_menu{
+.profile_menu {
   left: -3%;
   right: auto;
 }
@@ -14,7 +14,7 @@
   width: 22% !important;
 }
 @media screen and (max-width: 1199px) and (min-width: 991px) {
-  .profile_menu{
+  .profile_menu {
     right: 7%;
     left: auto !important;
     width: 25% !important;
@@ -24,14 +24,14 @@
   }
 }
 @media screen and (max-width: 991px) and (min-width: 767px) {
-  .profile_menu{
+  .profile_menu {
     right: 9%;
     left: auto !important;
     width: 30% !important;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 576px) {
-  .profile_menu{
+  .profile_menu {
     right: 12%;
     left: auto !important;
     width: 40% !important;
@@ -191,16 +191,16 @@
   border-color: transparent;
   line-height: 1.42857;
 }
-.paddingsbtn{
+.paddingsbtn {
   width: 100%;
   display: flex !important;
   align-items: center;
   justify-content: center;
 }
-.flexcenter{
+.flexcenter {
   width: 50%;
 }
-.marginrtl{
+.marginrtl {
   margin-right: 3%;
 }
 .login_area p {
@@ -236,15 +236,15 @@
 .Accounttel {
   text-align: right;
 }
-@media screen and (max-width: 960px)  and (min-width: 770px){
+@media screen and (max-width: 960px) and (min-width: 770px) {
   /* https://github.com/Eng-AbdoAmer/finshWebsite /////  */
-  .form-control-caption{
+  .form-control-caption {
     width: 90% !important;
   }
 }
-@media screen and (max-width: 770px)  and (min-width: 410px){
+@media screen and (max-width: 770px) and (min-width: 410px) {
   /* https://github.com/Eng-AbdoAmer/finshWebsite /////  */
-  .form-control-caption{
+  .form-control-caption {
     width: 90% !important;
   }
 }
@@ -320,7 +320,8 @@ div.content-personal {
   height: auto !important;
   margin: 0 !important;
 }
-.car-images p, .car-information p{
+.car-images p,
+.car-information p {
   letter-spacing: 0 !important;
   word-spacing: 0 !important;
 }
@@ -445,7 +446,7 @@ div.content-personal {
   -o-border-radius: 10px;
 }
 /* pagination start*/
-.pagination{
+.pagination {
   direction: ltr;
 }
 /* .pagination end*/
